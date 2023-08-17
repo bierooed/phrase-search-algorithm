@@ -67,11 +67,3 @@ for doc_id in search_results:
     matching_fragments = [fragment for fragment in documents[doc_id] if sum(1 for token in query.lower().split() if token in fragment.lower()) >= len(query.split())]
     for fragment in matching_fragments:
         print(f"Found in document: {doc_id}, fragment: {fragment}")
-
-
-# print(texts_fragments_dict)
-
-# Example of searching
-# phrase = "Berisha is elected chairman"
-# search_results = search_similar_phrases(phrase, texts_fragments_dict)
-# print(search_results)
